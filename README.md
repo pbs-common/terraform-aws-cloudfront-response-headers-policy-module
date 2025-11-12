@@ -7,7 +7,7 @@
 Use this URL for the source of the module. See the usage examples below for more details.
 
 ```hcl
-github.com/pbs/terraform-aws-cloudfront-response-headers-policy-module?ref=0.0.30
+github.com/pbs/terraform-aws-cloudfront-response-headers-policy-module?ref=x.y.z
 ```
 
 ### Alternative Installation Methods
@@ -22,7 +22,7 @@ Integrate this module like so:
 
 ```hcl
 module "cloudfront-response-headers-policy" {
-  source = "github.com/pbs/terraform-aws-cloudfront-response-headers-policy-module?ref=0.0.30"
+  source = "github.com/pbs/terraform-aws-cloudfront-response-headers-policy-module?ref=x.y.z"
 
   # Optional Parameters
   # cors_config = {
@@ -86,7 +86,7 @@ module "cloudfront-response-headers-policy" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`0.0.30`
+`x.y.z`
 
 Note, however that subtrees can be altered as desired within repositories.
 
@@ -102,14 +102,14 @@ Below is automatically generated documentation on this Terraform module using [t
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.2 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.5.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.13.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.24.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.20.0 |
 
 ## Modules
 
@@ -128,7 +128,7 @@ No modules.
 | <a name="input_product"></a> [product](#input\_product) | Tag used to group resources according to product | `string` | n/a | yes |
 | <a name="input_comment"></a> [comment](#input\_comment) | A comment to describe the response headers policy. The comment cannot be longer than 128 characters. | `string` | `null` | no |
 | <a name="input_cors_config"></a> [cors\_config](#input\_cors\_config) | CORS configuration | `any` | `null` | no |
-| <a name="input_custom_headers"></a> [custom\_headers](#input\_custom\_headers) | Custom headers | <pre>list(object({<br>    header   = string<br>    override = bool<br>    value    = string<br>  }))</pre> | `null` | no |
+| <a name="input_custom_headers"></a> [custom\_headers](#input\_custom\_headers) | Custom headers | <pre>list(object({<br/>    header   = string<br/>    override = bool<br/>    value    = string<br/>  }))</pre> | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the Cloudfront response headers policy module. If null, will default to product. | `string` | `null` | no |
 | <a name="input_security_headers_config"></a> [security\_headers\_config](#input\_security\_headers\_config) | A configuration for a set of security-related HTTP response headers | `map(any)` | `null` | no |
 
